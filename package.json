@@ -1,0 +1,23 @@
+{
+  "name": "codility",
+  "version": "1.0.0",
+  "description": "This is a public repo.\r testing git",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sonali-Nayak07/codility.git"
+  },
+  "author": "Sonali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sonali-Nayak07/codility/issues"
+  },
+  "homepage": "https://github.com/Sonali-Nayak07/codility#readme",
+  "devDependencies": {
+    "cypress": "^8.3.1",
+    "cypress-xpath": "^1.6.2"
+  }
+}
