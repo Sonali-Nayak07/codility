@@ -7,5 +7,14 @@
     "chromeWebSecurity":false,
     "defaultCommandTimeout":6000,
     "viewportWidth":1920,
-    "viewportHeight":1080
+    "viewportHeight":1080,
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+    }
     }

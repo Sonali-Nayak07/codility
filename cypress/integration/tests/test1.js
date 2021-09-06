@@ -14,7 +14,7 @@ describe('get api user tests', ()=>{
 
         }).then((res)=>{
             expect(res.status).to.eq(200)
-            expect(res.body[0]).has.property('username','Tvmxigk')
+            expect(res.body[0]).has.property('username','T91z7g')
         })
     })
 })
