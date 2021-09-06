@@ -16,7 +16,12 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 import './regression/user'
+import './regression/takeBuschalleng'
+import './regression/goToPublicPlace'
+import './regression/goToOffice'
+//import './apiRegression/addUser'
 require ('cypress-xpath')
+//require Cypress.moment.locale('en');
 
 cy.on('uncaught:exception',(err,runnable) => {
     //returning false here prevents Cypress from

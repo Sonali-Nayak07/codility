@@ -23,3 +23,9 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+//import 'cypress-iframe';
+//import 'cypress-waitfor';
+
+Cypress.Commands.add('goToHeroKuApp', ()=>{
+cy.visit('https://responsivefight.herokuapp.com/')
+})

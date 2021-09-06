@@ -1,6 +1,6 @@
 {
     "$schema": "",
-    "baseUrl":"",
+    "baseUrl":"https://supervillain.herokuapp.com/",
     "env":{
     },
     "video":false,
