@@ -16,9 +16,9 @@ Main URL - https://responsivefight.herokuapp.com/
 3. To use the locator Xpath,install
     `npm install -D cypress-xpath`        
 4. To setup Mochawesome for Reports, execute the following three sequentially
-    `npm install --save-dev mochawesome`
-    `npm install mochawesome-merge --save-dev`
-    `npm install -g mochawesome-report-generator`
+    - `npm install --save-dev mochawesome`
+    - `npm install mochawesome-merge --save-dev`
+    - `npm install -g mochawesome-report-generator`
 
 # Build and Test
 Cypress tests can be run in two way
