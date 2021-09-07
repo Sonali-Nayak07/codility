@@ -1,8 +1,11 @@
 # codility
 This project is a programatic take on SuperHeroes and SuperVillian which is carried out via 
-WebAutomation using Cypress to carry out most of the functionality.
-ReadMe will updated as the progress will be made.
-This is work in progress.
+WebAutomation using Cypress.
+
+Most feature is automated, where actions like creating user and navigating around for challenges is executed by the scripts in Cypress
+
+Main URL - https://responsivefight.herokuapp.com/
+
 
 # Project and Code Setup
 1. install NodeJS
