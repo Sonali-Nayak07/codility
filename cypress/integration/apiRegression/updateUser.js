@@ -1,5 +1,5 @@
 /// <reference types = "Cypress" />
-describe('post user request',()=>{
+describe('put user request',()=>{
     let uname = 'T'+(Math.random() + 1).toString(36).substring(7);
         it('create user test', ()=>{
 

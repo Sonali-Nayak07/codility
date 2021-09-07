@@ -46,7 +46,7 @@ describe('post user request',()=>{
 //Above is the Delete Code
 
 /// <reference types = "Cypress" />
-describe('get api user tests', ()=>{
+describe('delete user ', ()=>{
     
     it('get users', ()=>{
         cy.request({

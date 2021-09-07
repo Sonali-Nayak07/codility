@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-09-07T07:06:09.561Z",
+    "end": "2021-09-07T07:06:11.209Z",
+    "duration": 1648,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8ec11df4-fef0-4617-a64c-f9c2e4ce4668",
+      "title": "",
+      "fullFile": "cypress/integration/apiRegression/updateUser.js",
+      "file": "cypress/integration/apiRegression/updateUser.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f2492a71-7aee-4d23-93b2-f12e14d491e4",
+          "title": "put user request",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "create user test",
+              "fullTitle": "put user request create user test",
+              "timedOut": null,
+              "duration": 1557,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'POST',\n  url: 'https://supervillain.herokuapp.com/v1/user',\n  headers: {\n    'Authorization': 'Bearer ' + Cypress.env('passphrase')\n  },\n  body: {\n    \"username\": uname,\n    \"score\": \"4000\"\n  }\n}).then(res => {\n  expect(res.status).to.eq(201);\n}).then(res => {\n  let username = res.body[0];\n  cy.log(\"user name is: \" + uname);\n  cy.request({\n    method: 'PUT',\n    url: 'https://supervillain.herokuapp.com/v1/user/',\n    headers: {\n      'Authorization': 'Bearer ' + Cypress.env('passphrase')\n    },\n    body: {\n      \"username\": uname,\n      \"score\": \"100\"\n    }\n  }).then(res => {\n    expect(res.status).to.eq(204);\n  });\n});",
+              "err": {},
+              "uuid": "bb2c760f-7442-4e42-8ae8-ba8e514d1b6b",
+              "parentUUID": "f2492a71-7aee-4d23-93b2-f12e14d491e4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bb2c760f-7442-4e42-8ae8-ba8e514d1b6b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1557,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

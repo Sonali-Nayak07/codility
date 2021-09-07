@@ -1,0 +1,281 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-09-07T07:05:51.499Z",
+    "end": "2021-09-07T07:06:11.209Z",
+    "duration": 7294,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "32ebc4c8-3e26-4ef1-bd30-5252afe684b5",
+      "title": "",
+      "fullFile": "cypress/integration/apiRegression/getUser.js",
+      "file": "cypress/integration/apiRegression/getUser.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "52e3986d-283e-4ad7-a7bc-bb44ce9e27c7",
+          "title": "get api user tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "get users",
+              "fullTitle": "get api user tests get users",
+              "timedOut": null,
+              "duration": 669,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'GET',\n  url: 'https://supervillain.herokuapp.com/v1/user',\n  headers: {\n    'authorization': \"Bearer \" + Cypress.env('passphrase')\n  }\n}).then(res => {\n  //cy.log(token.passphrase)\n  expect(res.status).to.eq(200);\n  res.body[0].username; //gets the first element's username\n  expect(res.body[0]).has.property('username', res.body[0].username);\n  cy.log(\"Number of users in the array : \" + res.body.length); //cy.log(passphrase)\n  for (let i = 0; i < res.body.length; i++) {\n    cy.log(\"Name: \" + res.body[i].username);\n  }\n});",
+              "err": {},
+              "uuid": "926f429d-13e0-4927-aba3-0f1a84d6414c",
+              "parentUUID": "52e3986d-283e-4ad7-a7bc-bb44ce9e27c7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "926f429d-13e0-4927-aba3-0f1a84d6414c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 669,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "e7528016-44da-496c-9152-146255b06f36",
+      "title": "",
+      "fullFile": "cypress/integration/apiRegression/postUser.js",
+      "file": "cypress/integration/apiRegression/postUser.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "71477a11-09ef-4374-b9e3-05cd84291509",
+          "title": "post user request",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "create user test",
+              "fullTitle": "post user request create user test",
+              "timedOut": null,
+              "duration": 774,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//const timestamp=Date.now();\n//cy.log(timestamp);\ncy.request({\n  method: 'POST',\n  url: 'https://supervillain.herokuapp.com/v1/user',\n  headers: {\n    'Authorization': 'Bearer ' + Cypress.env('passphrase')\n  },\n  body: {\n    \"username\": 'T' + (Math.random() + 1).toString(36).substring(7),\n    \"score\": \"4000\"\n  }\n}).then(res => {\n  expect(res.status).to.eq(201); //expect(res.body).has.property('username','test999')\n});",
+              "err": {},
+              "uuid": "11239726-69d2-47cc-b3ae-b0adace8d237",
+              "parentUUID": "71477a11-09ef-4374-b9e3-05cd84291509",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "11239726-69d2-47cc-b3ae-b0adace8d237"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 774,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "8ec11df4-fef0-4617-a64c-f9c2e4ce4668",
+      "title": "",
+      "fullFile": "cypress/integration/apiRegression/updateUser.js",
+      "file": "cypress/integration/apiRegression/updateUser.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f2492a71-7aee-4d23-93b2-f12e14d491e4",
+          "title": "put user request",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "create user test",
+              "fullTitle": "put user request create user test",
+              "timedOut": null,
+              "duration": 1557,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'POST',\n  url: 'https://supervillain.herokuapp.com/v1/user',\n  headers: {\n    'Authorization': 'Bearer ' + Cypress.env('passphrase')\n  },\n  body: {\n    \"username\": uname,\n    \"score\": \"4000\"\n  }\n}).then(res => {\n  expect(res.status).to.eq(201);\n}).then(res => {\n  let username = res.body[0];\n  cy.log(\"user name is: \" + uname);\n  cy.request({\n    method: 'PUT',\n    url: 'https://supervillain.herokuapp.com/v1/user/',\n    headers: {\n      'Authorization': 'Bearer ' + Cypress.env('passphrase')\n    },\n    body: {\n      \"username\": uname,\n      \"score\": \"100\"\n    }\n  }).then(res => {\n    expect(res.status).to.eq(204);\n  });\n});",
+              "err": {},
+              "uuid": "bb2c760f-7442-4e42-8ae8-ba8e514d1b6b",
+              "parentUUID": "f2492a71-7aee-4d23-93b2-f12e14d491e4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bb2c760f-7442-4e42-8ae8-ba8e514d1b6b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1557,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "7dd5112f-7d29-42b6-93f9-1d4760ac6fc5",
+      "title": "",
+      "fullFile": "cypress/integration/apiRegression/deleteUser.js",
+      "file": "cypress/integration/apiRegression/deleteUser.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "34358af8-d241-4905-bbae-e60a1030c749",
+          "title": "delete user ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "get users",
+              "fullTitle": "delete user  get users",
+              "timedOut": null,
+              "duration": 4294,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'GET',\n  url: 'https://supervillain.herokuapp.com/v1/user',\n  headers: {\n    'authorization': \"Bearer \" + Cypress.env('passphrase')\n  }\n}).then(res => {\n  //cy.log(token.passphrase)\n  expect(res.status).to.eq(200);\n  res.body[0].username; //gets the first element's username\n  expect(res.body[0]).has.property('username', res.body[0].username);\n  cy.log(\"Delete was causing some service outage issue, hence the code is commented out, this execution is a dummy get execution\");\n});",
+              "err": {},
+              "uuid": "88229a5c-6ed4-470e-977a-66742b975616",
+              "parentUUID": "34358af8-d241-4905-bbae-e60a1030c749",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "88229a5c-6ed4-470e-977a-66742b975616"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4294,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

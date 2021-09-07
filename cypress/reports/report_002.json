@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-09-07T07:06:04.529Z",
+    "end": "2021-09-07T07:06:05.337Z",
+    "duration": 808,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e7528016-44da-496c-9152-146255b06f36",
+      "title": "",
+      "fullFile": "cypress/integration/apiRegression/postUser.js",
+      "file": "cypress/integration/apiRegression/postUser.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "71477a11-09ef-4374-b9e3-05cd84291509",
+          "title": "post user request",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "create user test",
+              "fullTitle": "post user request create user test",
+              "timedOut": null,
+              "duration": 774,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//const timestamp=Date.now();\n//cy.log(timestamp);\ncy.request({\n  method: 'POST',\n  url: 'https://supervillain.herokuapp.com/v1/user',\n  headers: {\n    'Authorization': 'Bearer ' + Cypress.env('passphrase')\n  },\n  body: {\n    \"username\": 'T' + (Math.random() + 1).toString(36).substring(7),\n    \"score\": \"4000\"\n  }\n}).then(res => {\n  expect(res.status).to.eq(201); //expect(res.body).has.property('username','test999')\n});",
+              "err": {},
+              "uuid": "11239726-69d2-47cc-b3ae-b0adace8d237",
+              "parentUUID": "71477a11-09ef-4374-b9e3-05cd84291509",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "11239726-69d2-47cc-b3ae-b0adace8d237"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 774,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
