@@ -21,7 +21,9 @@ This is work in progress.
 Cypress tests can be run in two way
 1. In Cypress IDE (Test Runner)
     - run this command in your terminal `npx cypress open`
-    - click on the test you want to run. Cypress will run the test that you can see
+    - Under Integration Tests in Cypress UI
+    - Can select any .js file under regression (createUser, goToOffice, goToPublicPlace, takeBus)
+    - Can select any .js file under apiRegression (getUser, postUser, updateUser, deleteUser)
 2. To run the tests in the terminal, run the below command. This will run all the tests
     - `npx cypress run`
 3. To run a single cypress test, run the following in terminal
@@ -36,7 +38,8 @@ Cypress tests can be run in two way
 7. Report will get generated under the cypress/reports/output.html
 
 Note - Please delete the reports folder prior to execution
+In case the passphrase expires, that can be updated in the cypress.json env parameter named passphrase
 
 # Resources 
-Executed Reports are avaialble to view under cypress/executed_reports
-Word document showcasing some screenshots of execution
+A sample screenshot of Executed Reports is avaialble to view under cypress/executed_reports
+and the html file.

@@ -1,7 +1,5 @@
 /// <reference types = "Cypress" />
 describe('post user request',()=>{
-    let accessToken='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJzdHJpbmdUIiwiaWF0IjoxNjMwOTEyMjM4LCJleHAiOjE2MzExNzE0Mzh9.HoZIVlsawB6IDZf3nZXb0uLxqKYNA06YEoZoaDFR5As';
-    //times0tamp = Cypress.moment();
         it('create user test', ()=>{
 
             //const timestamp=Date.now();
@@ -12,7 +10,7 @@ describe('post user request',()=>{
                 method: 'POST',
                 url: 'https://supervillain.herokuapp.com/v1/user',
                 headers: {
-                    'Authorization': 'Bearer ' + accessToken
+                    'Authorization': 'Bearer ' +Cypress.env('passphrase')
                 },
 
                 body:{

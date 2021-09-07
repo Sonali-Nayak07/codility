@@ -2,6 +2,7 @@
     "$schema": "",
     "baseUrl":"https://supervillain.herokuapp.com/",
     "env":{
+        "passphrase": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJzdHJpbmdXIiwiaWF0IjoxNjMwOTg4NDExLCJleHAiOjE2MzEyNDc2MTF9.6vfWRCcv0EydtbTJeMiVJvcYWuFDdAoY67pioxmQ8i0"
     },
     "video":false,
     "chromeWebSecurity":false,
